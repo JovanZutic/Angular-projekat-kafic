@@ -26,6 +26,10 @@ export class PiceService {
     return this.http.get(this.root + "izmeniCenu", {params});
   } 
 
+  downloadLagerReport(): Observable<ArrayBuffer> {
+    return this.http.get('/api/path/to/report', { responseType: 'arraybuffer' });
+  }
+
   dodajUMagacin(id:number, kolicina:number){
     console.log(id);
     console.log(kolicina);  
